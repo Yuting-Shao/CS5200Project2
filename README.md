@@ -166,4 +166,23 @@ mongorestore ./dump/CS5200Project
 
 ### Task 5
 
+The queries are in the folder `queries`. Run them with the command:
 
+```bash
+npm install
+node query1.js
+node query2.js
+node query3.js
+node query4.js
+node query5.js
+```
+
+1. query 1: aggregation query - find the total number of artworks for each artist
+
+2. query 2: complex search criterion - find all artworks created after a certain date (2018-01-01) and with a price greater than a specified amount (6000)
+
+3. query 3: counting documents for a specific user - count the number of artworks collected by a specific collector
+
+4. query 4: updating a document based on a query parameter - toggle the availability status of an artwork
+
+5. query 5: retrieve all documents in a collection - retrieve all documents from the Gallery collection
