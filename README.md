@@ -125,7 +125,7 @@ JSON example:
     "galleryName": "Art House",
     "location": "Downtown City",
     "contactDetails": "info@arthouse.com"
-  }
+  },
   "displayedArtworks": [
     "artwork123", // reference to Artwork ID
     "artwork234"  // other artworks
@@ -155,3 +155,15 @@ JSON example:
 ### Task 4
 
 #### Populate the tables with test data
+
+The dump of the database is in `./dump/CS5200Project2`
+
+#### Instructions for Database Initialization
+
+```bash
+mongorestore ./dump/CS5200Project
+```
+
+### Task 5
+
+
