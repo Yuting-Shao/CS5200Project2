@@ -156,9 +156,19 @@ JSON example:
 
 #### Populate the tables with test data
 
-The dump of the database is in `./dump/CS5200Project2`
+##### Way 1: Database Initialization
 
-#### Instructions for Database Initialization
+```bash
+mongoimport -d CS5200Project2 -c Artwork mongodb://localhost:27017 data/artwork.json --jsonArray
+mongoimport -d CS5200Project2 -c Artist mongodb://localhost:27017 data/artist.json --jsonArray
+mongoimport -d CS5200Project2 -c Collector mongodb://localhost:27017 data/collector.json --jsonArray
+mongoimport -d CS5200Project2 -c Exhibition mongodb://localhost:27017 data/exhibition.json --jsonArray
+mongoimport -d CS5200Project2 -c Gallery mongodb://localhost:27017 data/gallery.json --jsonArray
+```
+
+or
+
+##### Way 2: Restore from the dump
 
 ```bash
 mongorestore ./dump/
