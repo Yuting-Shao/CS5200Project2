@@ -161,7 +161,7 @@ The dump of the database is in `./dump/CS5200Project2`
 #### Instructions for Database Initialization
 
 ```bash
-mongorestore ./dump/CS5200Project
+mongorestore ./dump/
 ```
 
 ### Task 5
@@ -169,6 +169,7 @@ mongorestore ./dump/CS5200Project
 The queries are in the folder `queries`. Run them with the command:
 
 ```bash
+cd queries
 npm install
 node query1.js
 node query2.js
