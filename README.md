@@ -197,3 +197,13 @@ node query5.js
 4. query 4: updating a document based on a query parameter - toggle the availability status of an artwork
 
 5. query 5: retrieve all documents in a collection - retrieve all documents from the Gallery collection
+
+### Task 6
+
+The app is in the `app` folder.
+
+```bash
+cd app
+npm install
+npm start
+```

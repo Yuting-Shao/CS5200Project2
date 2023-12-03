@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Update Artwork</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Update Artwork</h1>
+        <form action="/artwork/<%= artwork._id %>?_method=PUT" method="POST">
+            <div>
+                <label>ID: <input type="text" name="artworkID" value="<%= artwork._id %>" readonly /></label>
+            </div>
+            <div>
+                <label>Title: <input type="text" name="title" value="<%= artwork.title %>" /></label>
+            </div>
+            <div>
+                <label>Medium: <input type="text" name="medium" value="<%= artwork.medium %>" /></label>
+            </div>
+            <div>
+                <label>Dimensions: <input type="text" name="dimension" value="<%= artwork.dimension %>" /></label>
+            </div>
+            <div>
+                <label>Creation Date: <input type="date" name="creationDate"
+                        value="<%= artwork.creationDate %>" /></label>
+            </div>
+            <div>
+                <label>Price: <input type="text" name="price" value="<%= artwork.price %>" /></label>
+            </div>
+            <div>
+                <label>Availability Status: <input type="text" name="availabilityStatus"
+                        value="<%= artwork.availabilityStatus %>" /></label>
+            </div>
+            <div>
+                <label>Artist ID: <input type="text" name="artistId"
+                        value="<%= artwork.artist ? artwork.artist._id : '' %>" /></label>
+            </div>
+            <div>
+                <input type="submit" value="Update" />
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div> Made by Yuting</div>
+    </footer>
+</body>
+
+</html>
