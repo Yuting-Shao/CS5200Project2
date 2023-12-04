@@ -31,6 +31,19 @@
                         </p>
                         <p>Availability Status: <%= artwork.availabilityStatus %>
                         </p>
+                        <!-- Display additional information -->
+                        <p>Collector Name: <%= artwork.collector ? artwork.collector.collectorName : 'N/A' %>
+                        </p>
+                        <p>Exhibitions:</p>
+                        <ul>
+                            <% if(artwork.exhibitions) { %>
+                                <% artwork.exhibitions.forEach(function(exhibition) { %>
+                                    <li>
+                                        <%= exhibition.exhibitionName %>
+                                    </li>
+                                    <% }); %>
+                                        <% } %>
+                        </ul>
                         <a href="/artwork/<%= artwork._id %>/edit" class="btn">Edit</a>
                         <button class="btn" onclick="confirmDelete('<%= artwork._id %>')">Delete</button>
                     </div>
@@ -47,11 +60,8 @@
             const confirmation = confirm('Are you sure you want to delete this artwork?');
             if (confirmation) {
                 // make a DELETE request
-                fetch(`/artwork/${artworkID}`, {
-                    method: 'DELETE'
-                }).then(() => {
-                    window.location.reload();
-                });
+                fetch(`/artwork/${artworkID}`, { method: 'DELETE' })
+                    .then(() => { window.location.reload(); });
             }
         }
     </script>

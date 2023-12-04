@@ -200,7 +200,7 @@ node query5.js
 
 ### Task 6
 
-The app is in the `app` folder.
+The app is in the `app` folder. To run the app, initialize the MongoDB first (see Task 4).
 
 ```bash
 cd app

@@ -43,6 +43,20 @@
                 </p>
                 <p>Total Exhibition: <%= artist.totalExhibitions %>
                 </p>
+                <div>
+                    <% if (artist.artworks && Array.isArray(artist.artworks)) { %>
+                        <h4>Artworks:</h4>
+                        <ul>
+                            <% artist.artworks.forEach(function(artworkId) { %>
+                                <li>
+                                    <%= artworkId %>
+                                </li>
+                                <% }); %>
+                        </ul>
+                        <% } else { %>
+                            <p>No artworks available for this artist.</p>
+                            <% } %>
+                </div>
                 <a href="/artist/<%= artist._id %>/edit" class="btn">Edit</a>
                 <a href="/artist/<%= artist._id %>" class="btn">View Artworks</a>
                 <button class="btn" onclick="confirmDelete('<%= artist._id %>')">Delete</button>
